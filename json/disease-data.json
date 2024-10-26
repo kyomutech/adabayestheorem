@@ -1,0 +1,302 @@
+{
+  "categories": {
+    "respiratorias": [
+      "Tos",
+      "Fiebre",
+      "Dificultad para respirar",
+      "Dolor de garganta",
+      "Congestión nasal",
+      "Silbidos al respirar",
+      "Dolor en el pecho",
+      "Fatiga",
+      "Dolor de cabeza",
+      "Agujeros en los pulmones"
+    ],
+    "digestivas": [
+      "Dolor abdominal",
+      "Náuseas",
+      "Diarrea",
+      "Acidez estomacal",
+      "Estreñimiento",
+      "Flatulencias",
+      "Pérdida de apetito",
+      "Hinchazón",
+      "Vómitos",
+      "Sangrado"
+    ],
+    "cardiacas": [
+      "Dolor en el pecho",
+      "Palpitaciones",
+      "Mareos",
+      "Fatiga",
+      "Dificultad para respirar",
+      "Sudoración",
+      "Dolor en el brazo",
+      "Dolor en la mandíbula",
+      "Nauseas",
+      "Desmayos"
+    ],
+    "neurologicas": [
+      "Dolor de cabeza",
+      "Mareos",
+      "Confusión",
+      "Pérdida de memoria",
+      "Convulsiones",
+      "Temblores",
+      "Sensación de hormigueo",
+      "Dificultad para concentrarse",
+      "Agujetas",
+      "Cambios en la visión"
+    ]
+  },
+  "diseaseProbabilities": {
+    "respiratorias": {
+      "Tos": {
+        "Asma": 0.6,
+        "Resfriado común": 0.4,
+        "Bronquitis": 0.5,
+        "Neumonía": 0.3,
+        "COVID-19": 0.2
+      },
+      "Fiebre": {
+        "Gripe": 0.7,
+        "Neumonía": 0.2,
+        "COVID-19": 0.5,
+        "Infección viral": 0.4,
+        "Faringitis": 0.3
+      },
+      "Dificultad para respirar": {
+        "Asma": 0.8,
+        "Neumonía": 0.4,
+        "Emfisema": 0.3,
+        "COVID-19": 0.5,
+        "Alergias": 0.2
+      },
+      "Dolor de garganta": {
+        "Faringitis": 0.5,
+        "Resfriado común": 0.3,
+        "COVID-19": 0.2,
+        "Infección viral": 0.4
+      },
+      "Congestión nasal": {
+        "Resfriado común": 0.7,
+        "Alergias": 0.5,
+        "Sinusitis": 0.4,
+        "Rinitis": 0.3
+      },
+      "Silbidos al respirar": {
+        "Asma": 0.6,
+        "EPOC": 0.4,
+        "Neumonía": 0.3
+      },
+      "Dolor en el pecho": {
+        "Neumonía": 0.5,
+        "Infarto": 0.3,
+        "Embolia": 0.2
+      },
+      "Fatiga": {
+        "Asma": 0.4,
+        "Bronquitis": 0.3,
+        "COVID-19": 0.5
+      },
+      "Dolor de cabeza": {
+        "Migraña": 0.5,
+        "Tensión": 0.3,
+        "Sinusitis": 0.2
+      },
+      "Agujeros en los pulmones": {
+        "EPOC": 0.6,
+        "Cáncer de pulmón": 0.5
+      }
+    },
+    "digestivas": {
+      "Dolor abdominal": {
+        "Gastritis": 0.5,
+        "Intoxicación alimentaria": 0.4,
+        "Apendicitis": 0.3,
+        "Síndrome del intestino irritable": 0.4,
+        "Cálculos biliares": 0.2
+      },
+      "Náuseas": {
+        "Gastritis": 0.6,
+        "Intoxicación alimentaria": 0.4,
+        "Migraña": 0.2,
+        "Cálculos biliares": 0.3,
+        "Reflujo gastroesofágico": 0.4
+      },
+      "Diarrea": {
+        "Intoxicación alimentaria": 0.7,
+        "Gastritis": 0.3,
+        "Colitis": 0.4,
+        "Infección intestinal": 0.5,
+        "Síndrome del intestino irritable": 0.2
+      },
+      "Acidez estomacal": {
+        "Reflujo gastroesofágico": 0.6,
+        "Gastritis": 0.4,
+        "Úlcera gástrica": 0.3
+      },
+      "Estreñimiento": {
+        "Síndrome del intestino irritable": 0.5,
+        "Hipotiroidismo": 0.3,
+        "Deshidratación": 0.2
+      },
+      "Flatulencias": {
+        "Síndrome del intestino irritable": 0.5,
+        "Intolerancia alimentaria": 0.4,
+        "Gastritis": 0.3
+      },
+      "Pérdida de apetito": {
+        "Depresión": 0.4,
+        "Gastritis": 0.3,
+        "Cáncer": 0.2
+      },
+      "Hinchazón": {
+        "Síndrome del intestino irritable": 0.5,
+        "Gastritis": 0.4,
+        "Intolerancia alimentaria": 0.3
+      },
+      "Vómitos": {
+        "Gastritis": 0.5,
+        "Intoxicación alimentaria": 0.4,
+        "Embarazo": 0.2
+      },
+      "Sangrado": {
+        "Úlcera gástrica": 0.6,
+        "Apendicitis": 0.4,
+        "Cáncer": 0.3
+      }
+    },
+    "cardiacas": {
+      "Dolor en el pecho": {
+        "Infarto": 0.9,
+        "Angina": 0.5,
+        "Embolia": 0.3,
+        "Pericarditis": 0.2,
+        "Reflujo gastroesofágico": 0.3
+      },
+      "Palpitaciones": {
+        "Arritmia": 0.6,
+        "Infarto": 0.4,
+        "Ansiedad": 0.3,
+        "Estrés": 0.2
+      },
+      "Mareos": {
+        "Arritmia": 0.7,
+        "Infarto": 0.5,
+        "Hipotensión": 0.4,
+        "Deshidratación": 0.3
+      },
+      "Fatiga": {
+        "Insuficiencia cardíaca": 0.5,
+        "Anemia": 0.3,
+        "Estrés": 0.4,
+        "Enfermedades pulmonares": 0.2
+      },
+      "Dificultad para respirar": {
+        "Insuficiencia cardíaca": 0.6,
+        "EPOC": 0.5,
+        "Anemia": 0.4
+      },
+      "Sudoración": {
+        "Infarto": 0.4,
+        "Ansiedad": 0.3,
+        "Estrés": 0.2
+      },
+      "Dolor en el brazo": {
+        "Infarto": 0.5,
+        "Angina": 0.4,
+        "Lesión muscular": 0.3
+      },
+      "Dolor en la mandíbula": {
+        "Infarto": 0.5,
+        "Problemas dentales": 0.4
+      },
+      "Nauseas": {
+        "Infarto": 0.4,
+        "Estrés": 0.3
+      },
+      "Desmayos": {
+        "Infarto": 0.6,
+        "Deshidratación": 0.4,
+        "Problemas de presión": 0.3
+      }
+    },
+    "neurologicas": {
+      "Dolor de cabeza": {
+        "Migraña": 0.6,
+        "Tensión": 0.5,
+        "Cefalea en racimos": 0.4,
+        "Sinusitis": 0.3
+      },
+      "Mareos": {
+        "Migraña": 0.5,
+        "Hipotensión": 0.4,
+        "Vértigo": 0.3
+      },
+      "Confusión": {
+        "Derrame cerebral": 0.6,
+        "Demencia": 0.4,
+        "Intoxicación": 0.3,
+        "Infecciones": 0.2
+      },
+      "Pérdida de memoria": {
+        "Demencia": 0.5,
+        "Derrame cerebral": 0.3,
+        "Trauma craneal": 0.2
+      },
+      "Convulsiones": {
+        "Epilepsia": 0.6,
+        "Derrame cerebral": 0.4
+      },
+      "Temblores": {
+        "Parkinson": 0.6,
+        "Esclerosis múltiple": 0.4,
+        "Hipertiroidismo": 0.2
+      },
+      "Sensación de hormigueo": {
+        "Derrame cerebral": 0.5,
+        "Neuropatía diabética": 0.4,
+        "Esclerosis múltiple": 0.3
+      },
+      "Dificultad para concentrarse": {
+        "Déficit de atención": 0.4,
+        "Depresión": 0.3,
+        "Ansiedad": 0.2
+      },
+      "Agujetas": {
+        "Estrés": 0.4,
+        "Falta de sueño": 0.3
+      },
+      "Cambios en la visión": {
+        "Migraña": 0.5,
+        "Derrame cerebral": 0.4,
+        "Problemas oculares": 0.3
+      }
+    }
+  },
+  "priorProbabilities": {
+    "Asma": 0.1,
+    "Resfriado común": 0.05,
+    "Bronquitis": 0.03,
+    "Neumonía": 0.02,
+    "COVID-19": 0.01,
+    "Gripe": 0.04,
+    "Infección viral": 0.03,
+    "Faringitis": 0.02,
+    "EPOC": 0.01,
+    "Cáncer de pulmón": 0.005,
+    "Gastritis": 0.04,
+    "Intoxicación alimentaria": 0.03,
+    "Apendicitis": 0.02,
+    "Síndrome del intestino irritable": 0.02,
+    "Cálculos biliares": 0.01,
+    "Infarto": 0.01,
+    "Arritmia": 0.02,
+    "Insuficiencia cardíaca": 0.005,
+    "Demencia": 0.005,
+    "Epilepsia": 0.005,
+    "Parkinson": 0.005,
+    "Déficit de atención": 0.005
+  }
+}

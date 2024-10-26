@@ -1,0 +1,132 @@
+@charset "UTF-8";
+/****************************** Importación de Fuentes Web ******************************/
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/****************************** Variables ******************************/
+/****************************** Mixins ******************************/
+/****************************** Global styles ******************************/
+body {
+  margin: 0; /* Ensure no default margin causes overflow */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+html {
+  font-size: 16px;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Playfair Display", serif;
+  color: #14273e;
+}
+
+label {
+  font-family: "Playfair Display", serif;
+  color: #14273e;
+}
+
+p {
+  font-family: "Lato", sans-serif;
+  color: #14273e;
+  font-size: 1.25rem;
+}
+
+/****************************** Flechas carrusel ******************************/
+.carousel-1 {
+  background-image: url("../imgs/lm_proj_carousel_1.webp");
+}
+
+.carousel-2 {
+  background-image: url("../imgs/lm_proj_carousel_2.webp");
+}
+
+.carousel-3 {
+  background-image: url("../imgs/lm_proj_carousel_3.webp");
+}
+
+.carousel-4 {
+  background-image: url("../imgs/lm_proj_carousel_4.webp");
+}
+
+.carousel-5 {
+  background-image: url("../imgs/lm_proj_carousel_5.webp");
+}
+
+.carousel-banner {
+  top: 0%;
+  background-size: cover;
+  background-position: center;
+  /* color del modo */
+  background-color: rgba(238, 246, 251, 0.4);
+  /* modo de color */
+  background-blend-mode: luminosity;
+  height: 50rem;
+  /* profundidad */
+  box-shadow: inset 0 0 0 1000px rgba(218, 201, 201, 0.4);
+  padding: 6.25rem;
+}
+
+.form-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#symptoms-container {
+  margin: 15px 0;
+}
+
+#symptoms-container label {
+  padding-left: 0.625rem;
+}
+
+#diagnosis-result {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #FF3333;
+}
+
+.form-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.form-container h1, .form-container h2 {
+  font-weight: 600;
+  color: #333;
+}
+.form-container h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.form-container h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.custom-select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  color: #495057;
+  width: 100%;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.custom-select:focus {
+  border-color: #42799E;
+  box-shadow: 0 0 5px rgba(66, 121, 158, 0.5);
+  outline: none;
+}
+
+button {
+  font-size: 1.1rem;
+  padding: 12px;
+  border-radius: 8px;
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Predicción de Enfermedades - Teorema de Bayes</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+</head>
+
+<body id="inicio">
+
+    <!-- Sección: Barra de navegación y Menú -->
+    <header>
+        <nav class="navbar navbar-expand-lg nav-style fixed-top">
+            <div class="container ">
+                <h1 class="text-white text-center">ADA - Sistema Predictivo</h1>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sección: Carrusel -->
+    <section>
+        <div id="main-carousel-indicators" class="carousel carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-indicators pb-5">
+                <button type="button" data-bs-target="#main-carousel-indicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#main-carousel-indicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#main-carousel-indicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#main-carousel-indicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#main-carousel-indicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="carousel-banner carousel-1">
+                        <div class="position-absolute top-25 end-0 pe-5 wow animate__animated animate__fadeInRight animate__delay-1s">
+                            <h1 class="pt-5">¡No estás solo!</h1>
+                            <h2 class="">¿Estás con la disposición de pedir ayuda?</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-banner carousel-2">
+                        <div class="position-absolute top-25 start-25 wow animate__animated animate__fadeInLeft animate__delay-1s">
+                            <h1 class="pt-5">En una calle sin salida</h1>
+                            <h2 class="">Estás en la calle, con angustia y soledad?</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-banner carousel-3">
+                        <div class="position-absolute top-25 start-25 wow animate__animated animate__backInDown animate__delay-1s">
+                            <h1 class="pt-5">¡Acercate!</h1>
+                            <h2 class="">Ayuda, soporte y guía.</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-banner carousel-4">
+                        <div class="position-absolute top-25 end-0 pe-5 wow animate__animated animate__fadeIn animate__delay-1s">
+                            <h1 class="pt-5">Reúnete con nosotros...</h1>
+                            <h2 class="">...Al reunirnos nos fortalecemos.</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-banner carousel-5">
+                        <div class="position-absolute top-25 end-0 wow animate__animated animate__swing animate__delay-1s">
+                            <h1 class="pt-5">¡Solos no podemos!</h1>
+                            <h2 class="">Unidos mantenemos el balance.</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#main-carousel-indicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#main-carousel-indicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- ---------------------------------------------------------- -->
+    <section id="contacto" class="separator-line animate__animated animate__fadeIn animate__delay-1s"></section>
+    <!-- ---------------------------------------------------------- -->
+
+    <div class="pt-5"></div>
+    <div class="pt-5"></div>
+
+    <section class="container">
+        <div class="form-container form-floating">
+            <h1 class="text-center pb-5">Sistema Predictivo</h1>
+            
+            <!-- Selección de categoría -->
+            <h2 class="pb-3">Selecciona una categoría de enfermedad</h2>
+            <div class="form-floating mb-4">
+                <select class="form-select custom-select" id="category-select" aria-label="Selecciona una categoría de enfermedad">
+                    <option selected disabled>Selecciona una categoría</option>
+                </select>
+                <label for="category-select">Categoría de Enfermedad</label>
+            </div>
+        
+            <!-- Selección de síntomas -->
+            <h2 class="pt-5 pb-3">Selecciona los síntomas</h2>
+            <div id="symptoms-container" class="mb-4"></div>
+        
+            <!-- Botón para obtener diagnóstico -->
+            <button id="diagnose-btn" type="button" class="btn btn-primary w-100">Obtener Diagnóstico</button>
+            <div id="diagnosis-result" class="mt-4"></div>
+        </div>
+    </section>
+
+    <div class="pb-5"></div>
+    <div class="pb-5"></div>
+
+    <!-- Sección: Footer -->
+    <footer class="bg-light footer-txt container-fluid-footer">
+        <div class="container">
+            <div class="text-center">
+                <h1 class="text-uppercase">ADA Sistema Predictivo</h1>
+                <p class="footer-txt">&copy; 2024 - Todos los derechos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/index.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@0.3.0/dist/lottie-player.js"></script>
+</body>
+</html>
